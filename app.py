@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, render_template
 
 # Creates a Flask application named app.
 app = Flask(__name__)
@@ -9,5 +9,6 @@ def hello_world():
     message = 'Server working...'
     return render_template('index.html', message=message)
 
+# Start the webserver
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0')
